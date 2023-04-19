@@ -536,16 +536,6 @@ public class Main {
         }
         return array;
     }
-    public static int[] BinaryTreeSort(int[] array){
-        int[] tree = new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0){
-
-            }
-        }
-        System.out.println(Arrays.toString(tree));
-        return array;
-    }
     public static int[] javaSort(int[] array){
         Arrays.sort(array);
         return array;
@@ -585,27 +575,36 @@ public class Main {
         int[] array = genRandArray(10,0,10);
 //        int[] array = new int[]{9,8,7,6,5,4,3,2,1};
 //        System.out.println(Arrays.toString(array));
+
+//        Block Sort
 //        sort("Bogo Sort","BogoSort",array);
-//        sort("Natural Merge Sort","NaturalMergeSort",array);
-//        sort("initialisierung","SpaghettiSort",array);
-//        sort("Cycle Sort","CycleSort",array);
 //        sort("Bubble Sort","Bubblesort",array);
-//        sort("\"I can´t belive it can sort\" Sort","IcantbeliveitcansortSort",array);
-//        sort("Selection Sort","SelectionSort",array);
+//        Cocktail Shaker Sort
+//        Comb Sort
+//        Cube Sort
+//        sort("Cycle Sort","CycleSort",array);
 //        sort("Exchange Sort","ExchangeSort",array);
 //        sort("Gnome Sort","GnomeSort",array);
 //        sort("Heap Sort","HeapSort",array);
-//        sort("Shell Sort","ShellSort",array);
 //        sort("Insertion Sort","InsertionSort",array);
-//        sort("Quick Sort","QuickSort",array);
+//        Libary Sort
 //        sort("Merge Sort","MergeSort",array);
-//        sort("Radix Sort","RadixSort",array);
+//        sort("Natural Merge Sort","NaturalMergeSort",array);
+//        odd Even Sort
+//        sort("Quick Sort","QuickSort",array);
+//        sort("Selection Sort","SelectionSort",array);
+//        sort("Shell Sort","ShellSort",array);
+//        Smooth Sort
+//        Strand Sort
+
+
+
 //        sort("Bucket Sort" ,"BucketSort",array);
+//        sort("\"I can´t belive it can sort\" Sort","IcantbeliveitcansortSort",array);
+//        sort("Radix Sort","RadixSort",array);
 //        sort("Java","javaSort",array);
 //        sort("Spaghetti Sort","SpaghettiSort",array);
 //        sort("Counting Sort" ,"CountingSort",array);
-        sort("Binary Tree Sort","BinaryTreeSort",array);
-
         ArrayList<String> n1;
         ArrayList<String> n2;
         int i2 = 0;
