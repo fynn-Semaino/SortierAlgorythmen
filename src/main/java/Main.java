@@ -536,6 +536,51 @@ public class Main {
         }
         return array;
     }
+    public static int[] CocktailShackerSort(int[] array){
+        int mini = 0;
+        int maxi = array.length - 2;
+        boolean asc = true;
+        for(int i = 0;mini != maxi;){
+            if (array[i] > array[i + 1]){
+                int temp = array[i + 1];
+                array[i + 1] = array[i];
+                array[i] = temp;
+            }
+            if (asc){
+                i++;
+            } else {
+                i--;
+            }
+            if (i == maxi && asc){
+                asc = false;
+                maxi--;
+            } else if (i == mini && !asc) {
+                asc = true;
+                mini++;
+            }
+        }
+        return array;
+    }
+    public static int[] CombSort(int[] array){
+        int gap = array.length;
+        boolean done = false;
+        while (!done){
+            done = true;
+            gap = (int) Math.floor((double) (gap / 1.3));
+            if (gap < 1){
+                gap = 1;
+            }
+            for (int i = 0;  i + gap < array.length; i++) {
+                if (array[i] > array[i+ gap ]){
+                    int temp = array[i];
+                    array[i] = array[i + gap];
+                    array[i + gap] = temp;
+                    done = false;
+                }
+            }
+        }
+        return array;
+    }
     public static int[] javaSort(int[] array){
         Arrays.sort(array);
         return array;
@@ -572,21 +617,24 @@ public class Main {
 //        for (int i = 0; i < i + 1; i++) {
 //            timer("Counting Sort","CountingSort",array);
 //        }
-        int[] array = genRandArray(10,0,10);
+        int[] array = genRandArray(10000, 0, 10);
 //        int[] array = new int[]{9,8,7,6,5,4,3,2,1};
 //        System.out.println(Arrays.toString(array));
 
+        /*Vergleicgbasierte Sortier Algorythmen*/
 //        Block Sort
 //        sort("Bogo Sort","BogoSort",array);
 //        sort("Bubble Sort","Bubblesort",array);
-//        Cocktail Shaker Sort
-//        Comb Sort
+        sort("Cocktail Shaker Sort","CocktailShackerSort",array);
+        sort("Comb Sort","CombSort",array);
 //        Cube Sort
 //        sort("Cycle Sort","CycleSort",array);
 //        sort("Exchange Sort","ExchangeSort",array);
 //        sort("Gnome Sort","GnomeSort",array);
 //        sort("Heap Sort","HeapSort",array);
+//        sort("\"I can´t belive it can sort\" Sort","IcantbeliveitcansortSort",array);
 //        sort("Insertion Sort","InsertionSort",array);
+//        sort("Java","javaSort",array);
 //        Libary Sort
 //        sort("Merge Sort","MergeSort",array);
 //        sort("Natural Merge Sort","NaturalMergeSort",array);
@@ -597,14 +645,13 @@ public class Main {
 //        Smooth Sort
 //        Strand Sort
 
-
-
+        /*Nicht Vergleichbasierte Sortier Alorythmen*/
 //        sort("Bucket Sort" ,"BucketSort",array);
-//        sort("\"I can´t belive it can sort\" Sort","IcantbeliveitcansortSort",array);
-//        sort("Radix Sort","RadixSort",array);
-//        sort("Java","javaSort",array);
-//        sort("Spaghetti Sort","SpaghettiSort",array);
 //        sort("Counting Sort" ,"CountingSort",array);
+
+//        sort("Radix Sort","RadixSort",array);
+//        sort("Spaghetti Sort","SpaghettiSort",array);
+
         ArrayList<String> n1;
         ArrayList<String> n2;
         int i2 = 0;
